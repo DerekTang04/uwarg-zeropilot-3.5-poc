@@ -1,5 +1,10 @@
+# settins and config folders
 .settings/
 .vscode/
-Debug/
 
+# build and debug artifacts
+Debug/
+build/
+
+# config files
 *.launch
