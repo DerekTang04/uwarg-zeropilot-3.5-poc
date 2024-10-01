@@ -19,5 +19,8 @@ TEST(Manager1Smoke, 11001_BlinkOnceBeforeTwice)
     EXPECT_CALL(mockLED, blinkTwice(_)).InSequence(s);
 
     // run test
-    m1.mainLoop();
+    for (int i = 0; i < 2; ++i)
+    {
+        m1.mainLoop();
+    }
 }
