@@ -25,7 +25,6 @@
 #include "model.hpp"
 #include "museq.hpp"
 #include "unified_threads.hpp"
-#include <cstdio>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
