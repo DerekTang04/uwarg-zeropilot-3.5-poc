@@ -79,9 +79,7 @@
 									<listOptionValue builtIn="false" value="../boardfiles/rtos/museq"/>
 									<listOptionValue builtIn="false" value="../boardfiles/rtos/threads/inc"/>
 									<listOptionValue builtIn="false" value="../boardfiles/utils"/>
-									<listOptionValue builtIn="false" value="../../zeropilot3.5/build/artifacts/include/driver_ifaces"/>
-									<listOptionValue builtIn="false" value="../../zeropilot3.5/build/artifacts/include/manager1"/>
-									<listOptionValue builtIn="false" value="../../zeropilot3.5/build/artifacts/include/manager2"/>
+									<listOptionValue builtIn="false" value="../../zeropilot3.5/build/include"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.includefiles.577830041" name="Include files (-include)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.includefiles" useByScannerDiscovery="false" valueType="includeFiles"/>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1092200948" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
@@ -93,7 +91,7 @@
 									<listOptionValue builtIn="false" value="zeropilot3.5"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.option.directories.1368879633" name="Library search path (-L)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.option.directories" valueType="libPaths">
-									<listOptionValue builtIn="false" value="../../zeropilot3.5/build/artifacts/lib"/>
+									<listOptionValue builtIn="false" value="../../zeropilot3.5/build"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.input.854470527" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>

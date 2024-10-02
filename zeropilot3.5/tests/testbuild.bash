@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
+
 set -e
 
 script_dir=$( cd -- "$( dirname -- "${bash_source[0]}" )" &> /dev/null && pwd )
-
-clean=false
+clean="false"
 
 usage() {
     echo "Usage: $0 [-c]"
@@ -13,7 +13,7 @@ usage() {
 while getopts "c" opt; do
     case "${opt}" in
         c)
-            clean=true
+            clean="true"
             ;;
         *)
             usage
@@ -34,15 +34,8 @@ cd "${script_dir}/build"
 
 if [[ ! -f "CMakeCache.txt" ]]; then
     echo "generating cmake..."
-    cmake -G "Ninja" \
-        -DCMAKE_BUILD_TYPE="Debug" \
-        -DCMAKE_TOOLCHAIN_FILE="../../nucleol552ze/nucleol552ze.cmake" \
-        -DCMAKE_INSTALL_PREFIX="$(pwd)" \
-        ..
+    cmake -G "Ninja" ..
 fi
 
 echo && echo "building..."
 cmake --build .
-
-echo && echo "installing..."
-cmake --install .

@@ -3,7 +3,6 @@
 
 extern "C"
 {
-
 /* overriding _write to redirect puts()/printf() to SWO */
 int _write(int file, char *ptr, int len)
 {
@@ -19,5 +18,4 @@ int _write(int file, char *ptr, int len)
 }
 
 /* interrupt callback functions */
-
 }
