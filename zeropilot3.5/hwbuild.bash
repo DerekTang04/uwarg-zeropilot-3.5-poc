@@ -7,7 +7,7 @@ clean="false"
 board="l552"
 
 usage() {
-    echo "Usage: $0 [-c]"
+    echo "Usage: $0 [-c] [-b] <board>"
     exit 1
 }
 
