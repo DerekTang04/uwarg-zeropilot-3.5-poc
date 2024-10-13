@@ -2,7 +2,7 @@
 
 set -e
 
-script_dir=$( cd -- "$( dirname -- "${bash_source[0]}" )" &> /dev/null && pwd )
+script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 clean="false"
 
 usage() {

@@ -2,7 +2,7 @@
 
 set -e
 
-script_dir=$( cd -- "$( dirname -- "${bash_source[0]}" )" &> /dev/null && pwd )
+script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 clean="false"
 board="l552"
 
@@ -37,14 +37,14 @@ else
 fi
 
 cd "${script_dir}/build"
-if [[ "$board" == "l552" ]]; then
-    tc_file="../../nucleol552ze/nucleol552ze.cmake"
-else
-    # TODO: update to reflect l562 boardfile in real repo
-    tc_file="../../nucleol552ze/nucleol552ze.cmake"
-fi
-
 if [[ ! -f "CMakeCache.txt" ]]; then
+    if [[ "$board" == "l552" ]]; then
+        tc_file="../../nucleol552ze/nucleol552ze.cmake"
+    else
+        # TODO: update to reflect l562 boardfile in real repo
+        tc_file="../../nucleol552ze/nucleol552ze.cmake"
+    fi
+
     echo "generating cmake..."
     echo "toolchain: $tc_file"
     cmake -G "Ninja" -DCMAKE_BUILD_TYPE="Debug" -DCMAKE_TOOLCHAIN_FILE="$tc_file" ..
